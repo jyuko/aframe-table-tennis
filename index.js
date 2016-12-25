@@ -76,7 +76,7 @@ var serveBall = function (position, velocity) {
     ball.setAttribute('position', position);
     ball.setAttribute('velocity', velocity);
     ball.setAttribute('geometry', "primitive: sphere; radius: 2;");
-    ball.setAttribute('dynamic-body', "math: 0.27;");
+    ball.setAttribute('dynamic-body', "math: 0.027;");
     ball.setAttribute('material', "color: #ffa500;");
     scene.appendChild(ball);
 };
