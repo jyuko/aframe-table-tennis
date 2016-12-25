@@ -32,10 +32,11 @@ var swing = function (hand) {
         position.z = hand.palmPosition[2];
 
         var rotation = new AFRAME.THREE.Vector3();
-        rotation.x = 90 - Math.atan(hand.palmNormal[1] / hand.palmNormal[2]) * 180 / Math.PI;
-        rotation.y = 0;
-        rotation.z = 90 - Math.acos(hand.palmNormal[0]) * 180 / Math.PI;
+        rotation.x = hand.pitch() * 180 / Math.PI;
+        rotation.y = -hand.yaw() * 180 / Math.PI;
+        rotation.z = hand.roll() * 180 / Math.PI;
 
+        //console.log('x:'+rotation.x+', y:'+rotation.y+', z:'+rotation.z);
         racket.setAttribute('position', position);
         racket.setAttribute('rotation', rotation);
     }
@@ -62,8 +63,6 @@ var serve = function (hand) {
 
             isServe = false;
             dummy.setAttribute('visible', false);
-            dummy.setAttribute('isPlaying', false);
-
         } else {
             dummy.setAttribute('position', position);
         }

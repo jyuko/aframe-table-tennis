@@ -13,6 +13,7 @@
 
         <a-sky color="#EEE"></a-sky>
 
+
         <a-entity id="table"
                   shadow="cast: false; receive: true"
                   geometry="primitive: box; depth: 274; height: 4; width: 152.5"
@@ -21,7 +22,37 @@
                   static-body="shape: box;">
         </a-entity>
 
-        <a-entity id="racket" position="30 100 130" rotation="0 0 0">
+        <a-entity id="line" material="color: #ffffff;" position="0 76 0">
+            <a-plane
+                width="3" height="274"
+                rotation="-90 0 0" position="0 0.1 0">
+            </a-plane>
+            <a-plane
+                width="3" height="274"
+                rotation="-90 0 0" position="76 0.1 0">
+            </a-plane>
+            <a-plane 
+                width="3" height="274"
+                rotation="-90 0 0" position="-76 0.1 0">    
+            </a-plane>
+            <a-plane
+                width="152.5" height="3"
+                rotation="-90 0 0" position="0 0.1 135.5">
+            </a-plane>
+            <a-plane
+                width="152.5" height="3"
+                rotation="-90 0 0" position="0 0.1 -135.5">
+            </a-plane>
+        </a-entity>
+
+        <a-plane id="net"
+                 width="152.5" height="15.2"
+                 material="color: #ffffff;"
+                 position="0 83.6 0"
+                 static-body>
+        </a-plane>
+
+        <a-entity id="racket" position="30 100 130" scale="1 1 1" rotation="0 0 0">
             <a-cylinder id="blade"
                         radius="7.5" height="0.58"
                         material="color: #deb887;"
@@ -51,18 +82,10 @@
         </a-entity>
 
         <a-sphere id="dummy_ball"
-            radius="2"
-            position="-30 100 130"
-            material="color: #ffa500;"
-            static-body>
+                  radius="2"
+                  position="-30 100 130"
+                  material="color: #ffa500;">
         </a-sphere>
-
-        <a-plane id="net"
-                 width="152.5" height="15.2"
-                 material="color: #ffffff;"
-                 position="0 83.6 0"
-                 static-body>
-        </a-plane>
 
         <a-plane id="ground"
                  width="1000" height="1000"
