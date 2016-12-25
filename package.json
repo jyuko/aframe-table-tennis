@@ -1,0 +1,25 @@
+{
+  "name": "aframe-table-tennis",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "sh_yamazaki",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "aframe": "^0.4.0",
+    "aframe-look-at-component": "^0.1.2",
+    "aframe-physics-system": "^1.2.0",
+    "ammo.js": "0.0.10",
+    "cannon": "^0.6.2",
+    "envify": "^4.0.0",
+    "leapjs": "^0.6.4"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

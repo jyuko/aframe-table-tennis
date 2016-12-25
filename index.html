@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>A-Frame Table Tennis</title>       
+        <script src="./dist/app.min.js"></script>
+    </head>
+
+    <body>
+    <a-scene antialias="true" physics="gravity: -98; restitution: 0.8;">
+
+        <a-entity id="player" camera="userHeight: 150" position="0 0 170" rotation="-30 0 0" look-controls></a-entity>
+
+        <a-sky color="#EEE"></a-sky>
+
+        <a-entity id="table"
+                  shadow="cast: false; receive: true"
+                  geometry="primitive: box; depth: 274; height: 4; width: 152.5"
+                  material="color: #0000ff;"
+                  position="0 74 0"
+                  static-body="shape: box;">
+        </a-entity>
+
+        <a-entity id="racket" position="30 100 130" rotation="0 0 0">
+            <a-cylinder id="blade"
+                        radius="7.5" height="0.58"
+                        material="color: #deb887;"
+                        position="0 0 -10"
+                        rotation="0 0 0"
+                        static-body>
+            </a-cylinder>
+            <a-cylinder id="front_rubber"
+                        radius="7.5" height="0.3"
+                        material="color: #ff0000;"
+                        position="0 -0.29 -10"
+                        rotation="0 0 0"
+                        static-body>
+            </a-cylinder>
+            <a-cylinder id="back_rubber"
+                        radius="7.5" height="0.3"
+                        material="color: #000000;"
+                        position="0 0.29 -10"
+                        rotation="0 0 0"
+                        static-body>
+            </a-cylinder>
+            <a-cylinder id="grip"
+                        radius="1.2" height="10"
+                        rotation="90 0 0"
+                        material="color: #deb887;">
+            </a-cylinder>
+        </a-entity>
+
+        <a-sphere id="dummy_ball"
+            radius="2"
+            position="-30 100 130"
+            material="color: #ffa500;"
+            static-body>
+        </a-sphere>
+
+        <a-plane id="net"
+                 width="152.5" height="15.2"
+                 material="color: #ffffff;"
+                 position="0 83.6 0"
+                 static-body>
+        </a-plane>
+
+        <a-plane id="ground"
+                 width="1000" height="1000"
+                 material="color: #deb887;"
+                 rotation="-90 0 0"
+                 static-body>
+        </a-plane>
+    </a-scene>
+</body>
+
+</html>
