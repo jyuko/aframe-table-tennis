@@ -1,4 +1,4 @@
-# A-Frame Table tennis Sample
+# [WIP]A-Frame Table tennis Sample
 using A-Frame and LeapMotion.
 
 
